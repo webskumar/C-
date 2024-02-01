@@ -1,0 +1,59 @@
+using System;
+using System.Threading;
+namespace AcyDemo
+{
+internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Task1();
+            Task2();
+            Task3();
+            Task4();
+            Console.ReadLine();
+
+        }
+        public static async void Task1()
+        {
+           await Task.Run(() => {
+                Console.WriteLine("Task1 Stating..");
+                Thread.Sleep(4000);
+                Console.WriteLine("Task1 Complited..");
+            });
+            
+
+        }
+        public static async void Task2()
+        {
+            await Task.Run(() => {
+                Console.WriteLine("Task2 Stating..");
+                Thread.Sleep(5000);
+                Console.WriteLine("Task2 Complited..");
+            });
+            
+
+        }
+        public static async void Task3()
+        {
+            await Task.Run(() => {
+                Console.WriteLine("Task3 Stating..");
+                Thread.Sleep(1000);
+                Console.WriteLine("Task3 Complited..");
+            });
+            
+
+        }
+        public static async void Task4()
+        {
+            await Task.Run(() => {
+                Console.WriteLine("Task4 Stating..");
+                Thread.Sleep(6000);
+                Console.WriteLine("Task4 Complited..");
+            });
+            
+
+        }
+    }
+
+
+}
