@@ -1,0 +1,96 @@
+
+    class Program
+    {
+        public void show() // Declaring a method // non static // instance method
+        {
+            Console.WriteLine("Weblcome to cSharp Programing......");
+            Console.WriteLine("Hey Bro.....");
+        //public – Access Modifier/Access Accifyer  (String, int…… etc)
+        //void – Return Tupe
+        //show() – Function Name
+        //{} – Method Body
+        // Method Body  - this time  Declaring  a method or function 
+        // method or function class ko call karne ke liye main method me object banakar use call 
+    }
+
+        public static void add(int num1, int num2) // parameterize Method
+        {
+        int result=num1 + num2;
+        Console.WriteLine("Addition Result is :" + result);
+    }
+    public static void show1() // Declaring a method // Static Method // instance method
+        {
+            Console.WriteLine("Weblcome to cSharp Programing......");
+            Console.WriteLine("Hey Bro.....");
+        }
+    //public static void ShowName( string name="Unone")
+    //{
+    //    Console.WriteLine("Your Name is :" +name);
+    //}
+    public static void Show_Name_Age(string name, int age)
+    {
+        Console.WriteLine("your name is "+name +" and age is a "+age);
+    }
+    public static void Addition(int a, int b)
+    {
+        int result = a + b;
+        Console.WriteLine("Add Result is : {0}", result);
+    }
+    public static void Substraction(int a, int b)
+    {
+        int result = a - b;
+        Console.WriteLine("Substraction Result is : {0}", result);
+    }
+    public static void Muliplecation(int a, int b)
+    {
+        int result = a * b;
+        Console.WriteLine("Multiplecation Result is : {0}", result);
+    }
+    public static void Division(int a, int b)
+    {
+        int result = a / b;
+        Console.WriteLine("Division Result is : {0}", result);
+    }
+    static void Main(string[] args)
+        {
+        Console.WriteLine("Enter Your First Number");
+        int num1 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter Your Second Number");
+        int num2 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter your operator(+, -, *, /)");
+        string op = Console.ReadLine();
+
+        if (op.Equals("+"))
+        {
+            Program.Addition(num1, num2);
+        }
+        else if (op.Equals("-"))
+        {
+            Program.Substraction(num1, num2);
+        }
+        else if(op.Equals("*"))
+        {
+            Program.Muliplecation(num1, num2);
+        }
+        else if(op.Equals("/"))
+        {
+            Program.Division(num1, num2);
+        }
+
+        //Program.Show_Name_Age("mohan", 20);
+        //Program.ShowName();
+
+        //Console.WriteLine("Enter First Number :");
+        //int a = int.Parse(Console.ReadLine());
+
+        //Console.WriteLine("Enter Secont Number :");
+        //int b = int.Parse(Console.ReadLine());
+
+        //Program.add(a, b);//argument
+        //Program.show1(); // calling a function.
+        //  Program p1 = new Program();
+        //  p1.show();//call
+    }
+    }
+
+
