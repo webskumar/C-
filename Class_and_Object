@@ -1,0 +1,33 @@
+using System;
+namespace ConsoleApp1
+{
+    class Student
+    {
+        int rollno;
+        string name;
+        int age;
+        int Standard;
+
+        public void setStudent(int rollno, string name, int age, int Standerd)
+        { 
+            this.rollno = rollno;
+            this.name = name;
+            this.age = age;
+            this.Standard = Standerd;
+        }
+
+        public void getStudent()
+        {
+            Console.WriteLine("your roll no is {0}, name-{1}, age-{2} and sdtander-{3}",this.rollno, this.name, this.age, this.Standard);
+        }
+        static void Main(string[] args)
+        {
+            Student ram = new Student();
+            ram.setStudent(22, "Ram Ji", 20,10);
+            ram.getStudent();
+            Console.ReadLine();
+
+
+        }
+    }
+}
