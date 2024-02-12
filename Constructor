@@ -1,0 +1,26 @@
+class Program
+{
+    public Program()
+    {
+        Console.WriteLine("this is a first constructor !!");
+    }
+    public Program(int a, int b)
+    {
+        Console.WriteLine("this is a second constructor !! {0}", (a+b));
+    }
+
+    public Program(int a, int b, int c)
+    {
+        Console.WriteLine("this is a Third constructor !! {0}", (a + b + c));
+    }
+
+
+    static void Main(string[] args)
+    {
+        //constructor voerloading
+        Program p = new Program(10,20, 1);
+       
+        Console.ReadLine();
+
+    }
+}
