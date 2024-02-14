@@ -1,0 +1,38 @@
+
+class person
+{
+    //both are a static variable
+    public static string PersonName;
+    public static int PersonAge;
+
+    //Static Constructer
+    static person()
+     {
+        PersonName = "Ram Ji";
+        PersonAge = 21;
+        Console.WriteLine("Static Constructer invoke !!");
+    }
+    //Default constructor
+    public person()
+    {
+        Console.WriteLine("Default Constructor invoke !!");
+    }
+    public static void getDetains()
+    {
+        Console.WriteLine("Person name is {0}", PersonName);
+        Console.WriteLine("Person  is age {0}", PersonAge);
+    }
+}
+
+class Program
+{
+
+    static void Main(String[] args)
+    {
+        person ram = new person();
+        person ram1 = new person();
+        person.getDetains();
+        Console.ReadLine();
+    }
+
+}
