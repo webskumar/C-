@@ -1,0 +1,43 @@
+class Student
+{   // this is a instance variable because this variable before not add static
+    //by default instance variable private
+    int rollno;
+    string firstname;
+    string lastname;
+    int age;
+    // static vairiable call in main method from class name
+    static string schoolName = "ABC School";
+
+
+    // this is a instance methods public void printFullName(){}
+    public void printFullName() 
+    { 
+        string fullname=this.firstname +" "+ this.lastname;
+        Console.WriteLine("Your full Name is {0}", fullname);
+    }
+    //static : all object ke liye same value hoga
+
+
+    static void Main(string[] args)
+    {
+        //constructor voerloading
+        Student p = new Student();
+        p.rollno = 1;
+        p.firstname = "Ram";
+        p.lastname = "Ji";
+        Console.WriteLine(Student.schoolName);
+        
+        Student r = new Student();
+        r.rollno = 2;
+        r.firstname = "Promod";
+        r.lastname = "Kumar";
+
+        Console.WriteLine(p.rollno +" and " + p.firstname +" "+ p.lastname);
+        p.printFullName();
+        Console.ReadLine();
+
+       
+        Console.ReadLine();
+
+    }
+}
