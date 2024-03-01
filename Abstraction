@@ -1,0 +1,51 @@
+using class_Object;
+class Employee
+{
+    public int Empid;
+    public string EmpName;
+    public double GrossPay; //2500 // house rent --- 5000, convence allowance 
+    double TaxDeduction = 0.1; //10%
+    double netSalery;
+
+    //parametrise constructor
+    public Employee(int empid, string empName, double grossPay)
+    {
+       
+        this.Empid = empid;
+        this.EmpName = empName;
+        this.GrossPay = grossPay;
+        
+    }
+    //Create Private Method
+    void CalculateSalary()
+    { 
+    if(GrossPay >= 30000)
+        {
+            netSalery = GrossPay - (TaxDeduction * GrossPay);
+            Console.WriteLine("Your Salary in : {0}", this.netSalery);
+        }
+    else {
+            Console.WriteLine("Your Salary in : {0}", this.GrossPay);
+        }
+    }
+    public void ShowEmployeeDetais()
+    {
+        Console.WriteLine("Your Employ Id : {0}", this.Empid);
+        Console.WriteLine("Your Name is  : {0}", this.EmpName);
+        this.CalculateSalary();
+    }
+}
+
+
+class Student 
+{
+   
+    static void Main(String[] args)
+    {
+
+        Employee Ram = new Employee(21,"Shyam kumar",40000);
+        Ram.ShowEmployeeDetais();
+
+
+      
+    }
